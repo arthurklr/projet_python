@@ -1,3 +1,6 @@
+# Programme qui convertit des °C en °F
+
+
 degre_celcius = float(input ("Entrez des degrés Celsius : "))
 
 degre_fahrenheit = degre_celcius * 9/5 +32 
