@@ -1,3 +1,7 @@
+# Programme d'un jeu du mot mystère
+
+
+
 import random
 
 # Liste des mots mystères
