@@ -3,14 +3,14 @@
 import random
 
 # Liste des mots mystères
-liste_mots = ['python', 'ordinateur', 'programmation', 'developpeur', 'algorithme']
+liste_mots = ['marissa', 'corentin', 'alain', 'matheo']
 
 # Choisir un mot mystère aléatoirement
 mot_mystere = random.choice(liste_mots)
 
 # Initialiser les variables
 mot_public = '_' * len(mot_mystere)
-vie = 7
+vie = len(mot_mystere)
 lettre_utilisees = []
 
 # Boucle principale du jeu
