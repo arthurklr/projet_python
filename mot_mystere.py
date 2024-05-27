@@ -11,10 +11,18 @@ mot_mystere = random.choice(liste_mots)
 # Initialiser les variables
 mot_public = '_' * len(mot_mystere)
 vie = 7
+lettre_utilisees = []
 
 # Boucle principale du jeu
 while vie > 0 and mot_mystere != mot_public:
     lettre = input("Donnez une lettre : ")
+    if len(lettre) !=1:
+        print("Veuillez entrer qu'une seule lettre.")
+        continue
+    if lettre in lettre_utilisees:
+        print("Vous avez déjà utilisé cette lettre")
+        continue
+    lettre_utilisees.append(lettre)
     if lettre in mot_mystere:
         for i in range(len(mot_mystere)):
             if mot_mystere[i] == lettre:
@@ -30,3 +38,4 @@ while vie > 0 and mot_mystere != mot_public:
         print("La lettre", lettre, "n'est pas dans le mot.")
         print("Vous avez", vie, "vies restantes.")
         print("Le mot est :", mot_public)
+        print("Lettres utilisées : ", lettre_utilisees)
