@@ -1,7 +1,5 @@
 # Programme qui vous affiche si vous avez le bac ou non
 
-
-
 moyenne = float(input("Quel est votre moyenne ? "))
 
 if 10 <= moyenne < 12:
