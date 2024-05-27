@@ -27,5 +27,6 @@ while vie > 0 and mot_mystere != mot_public:
     elif vie == 0:
         print("Vous avez perdu")
     else:
+        print("La lettre", lettre, "n'est pas dans le mot.")
         print("Vous avez", vie, "vies restantes.")
         print("Le mot est :", mot_public)
