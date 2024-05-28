@@ -1,18 +1,18 @@
 def afficher_grille(grille):
-    print("     1)  2)  3)")
+    print("     0)  1)  2)")
     print("   -------------")
-    print("1)", end='')
+    print("0)", end='')
     for i in range(3):
         print(" | "+str(grille[i]), end='')
         
     print(" |")
     print("   -------------")
-    print("2)", end='')
+    print("1)", end='')
     for i in range(3):
         print(" | "+str(grille[i+3]), end='')
     print(" |")
     print("   -------------")
-    print("3)", end='')
+    print("2)", end='')
     for i in range(3):
         print(" | "+str(grille[i+6]), end='')
     print(" |")
@@ -57,4 +57,23 @@ def est_match_nul(grille):
     for i in range(9):
         if grille[i]==" ":
             return 0
-        return 1
+    return 1
+
+joueur=1
+print("Le joueur 1 possède les X. Le joueur 2 possède les O")
+grille=[" "," "," "," "," "," "," "," "," "]
+afficher_grille(grille)
+gagne=0
+while gagne==0:
+    tour(grille, joueur)
+    if est_gagnant(grille):
+        print("Le joueur "+str(joueur)+" remporte la partie")
+        gagne = 1
+    else:
+        if est_match_nul(grille):
+            print("Plus de place ! Match nul !")
+            gagne = 1
+    if joueur ==1:
+        joueur =2
+    else:
+        joueur=1
